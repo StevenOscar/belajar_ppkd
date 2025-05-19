@@ -15,6 +15,7 @@ void cetakKarakter(int bintang) {
   for (int i = 0; i < bintang; i++) {
     stdout.write("* ");
   }
+  print("");
 }
 
 void namaBerulang(String nama, int pengulangan) {
@@ -38,7 +39,7 @@ void daftarBelanja(List<String> shoppingList) {
 void main() {
   List<String> buah = ["Apel", "Jeruk", "Mangga", "Anggur"];
   List<String> hewan = ["Kucing", "Anjing", "Burung", "Ikan"];
-  List<String> shoppingList = ["Kecap", "Garam", "Beras", "Minyak", "bBawang"];
+  List<String> shoppingList = ["Kecap", "Garam", "Beras", "Minyak", "Bawang"];
 
   print("Soal Nomor 1");
   tampilkanGanjil(20);
