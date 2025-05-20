@@ -8,16 +8,16 @@ class TugasSatuFlutter extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text("Profil Saya", style: TextStyle(color: Colors.white),),
+        title: Text("Profil Saya", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 40),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            padding: EdgeInsets.all(20),
+            margin: const EdgeInsets.symmetric(horizontal: 65),
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Colors.grey[300],
@@ -25,10 +25,24 @@ class TugasSatuFlutter extends StatelessWidget {
             ),
             child: Column(
               children: [
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                    ),
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                  padding: EdgeInsets.all(15),
+                  child: Icon(
+                    Icons.person,
+                    size: 100,
+                  ),
+                ),
                 Text(
                   "Steven Oscar",
                   style: TextStyle(
-                    fontSize: 48,
+                    fontSize: 40,
                     fontWeight: FontWeight.w700,
                     color: Colors.black,
                   )
@@ -37,7 +51,7 @@ class TugasSatuFlutter extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.location_on),
-                    SizedBox(width: 10,),
+                    SizedBox(width: 5,),
                     Text(
                       "Bekasi",
                       style: TextStyle(
@@ -51,7 +65,7 @@ class TugasSatuFlutter extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 50,),
+          SizedBox(height: 40,),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             padding: EdgeInsets.all(20),
