@@ -73,11 +73,12 @@ class TugasDuaFlutter extends StatelessWidget {
                         Expanded(
                           child: Text(
                             "stevenoscar458@gmail.com",
+                            textAlign: TextAlign.right,
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                               color: Colors.white,
-                              overflow: TextOverflow.ellipsis
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ),
                         ),
