@@ -32,8 +32,8 @@ class MyApp extends StatelessWidget {
       // home: MeetEmpat(),
       // home: TugasSatuFlutter(),
       // home: TugasDuaFlutter(),
-      home: TugasTigaFlutter(),
-      // home: TugasEmpatFlutter(),
+      // home: TugasTigaFlutter(),
+      home: TugasEmpatFlutter(),
     );
   }
 }
