@@ -73,7 +73,6 @@ class _TugasLimaFlutterState extends State<TugasLimaFlutter> {
         ],
         backgroundColor: Color(0XFF303841),
       ),
-
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color(0xff00ADB5),
         onPressed: () {
@@ -95,7 +94,6 @@ class _TugasLimaFlutterState extends State<TugasLimaFlutter> {
                     "Notes count :",
                     style: TextStyle(
                       fontFamily: "Montserrat",
-
                       color: Color(0xff00ADB5),
                       fontSize: 16,
                       fontWeight: FontWeight.w700,

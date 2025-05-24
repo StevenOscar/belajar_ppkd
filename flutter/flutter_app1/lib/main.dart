@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       // home: TugasDuaFlutter(),
       // home: TugasTigaFlutter(),
       // home: TugasEmpatFlutter(),
-      home: TugasLimaFlutter(),
+      // home: TugasLimaFlutter(),
     );
   }
 }
