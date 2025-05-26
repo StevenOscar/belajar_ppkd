@@ -10,6 +10,7 @@ import 'package:flutter_app1/meet_3/meet_3c.dart';
 import 'package:flutter_app1/tugas/tugas_3_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_4_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_5_flutter.dart';
+import 'package:flutter_app1/tugas/tugas_6_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
       // home: TugasTigaFlutter(),
       // home: TugasEmpatFlutter(),
       // home: TugasLimaFlutter(),
+      home: TugasEnamFlutter(),
     );
   }
 }
