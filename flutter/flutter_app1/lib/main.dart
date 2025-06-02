@@ -6,6 +6,7 @@ import 'package:flutter_app1/tugas/tugas_7/switch_page.dart';
 import 'package:flutter_app1/tugas/tugas_7/time_picker_page.dart';
 import 'package:flutter_app1/tugas/tugas_7/tugas_7_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_8/tugas_8_flutter.dart';
+import 'package:flutter_app1/tugas/tugas_9/tugas_9_flutter.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
@@ -58,7 +59,8 @@ class _MyAppState extends State<MyApp> {
       // home: TugasEnamFlutter(),
       // home: Navigation(),
       // home: TugasTujuhFlutter(),
-      home: TugasDelapanFlutter(),
+      // home: TugasDelapanFlutter(),
+      home: TugasSembilanFlutter(),
     );
   }
 }
