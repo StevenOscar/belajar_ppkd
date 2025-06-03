@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app1/tugas/tugas_7/checkbox_page.dart';
-import 'package:flutter_app1/tugas/tugas_7/date_picker_page.dart';
-import 'package:flutter_app1/tugas/tugas_7/dropdown_page.dart';
-import 'package:flutter_app1/tugas/tugas_7/switch_page.dart';
-import 'package:flutter_app1/tugas/tugas_7/time_picker_page.dart';
-import 'package:flutter_app1/tugas/tugas_7/tugas_7_flutter.dart';
-import 'package:flutter_app1/tugas/tugas_8/tugas_8_flutter.dart';
-import 'package:flutter_app1/tugas/tugas_9/tugas_9_flutter.dart';
+import 'package:flutter_app1/tugas/tugas_10/tugas_10_flutter.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
@@ -27,7 +20,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-        fontFamily: "Poppins"
+        fontFamily: "Montserrat",
       ),
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
@@ -60,7 +53,8 @@ class _MyAppState extends State<MyApp> {
       // home: Navigation(),
       // home: TugasTujuhFlutter(),
       // home: TugasDelapanFlutter(),
-      home: TugasSembilanFlutter(),
+      // home: TugasSembilanFlutter(),
+      home: TugasSepuluhFlutter(),
     );
   }
 }
