@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app1/helper/preference_handler.dart';
 import 'package:flutter_app1/tugas/tugas_7/checkbox_page.dart';
 import 'package:flutter_app1/tugas/tugas_7/date_picker_page.dart';
 import 'package:flutter_app1/tugas/tugas_7/dropdown_page.dart';
@@ -192,6 +193,20 @@ class _TugasTujuhFlutterState extends State<TugasTujuhFlutter> {
                       setState(() {
                         currentIndex = 4;
                         Navigator.pop(context);
+                      });
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.logout, size: 30, color: Colors.red),
+                    title: Text("Logoout", style: TextStyle(color: Colors.red)),
+                    onTap: () {
+                      setState(() {
+                        PreferenceHandler.setLogin(false);
+                        Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          "/tugas_6",
+                          (route) => false,
+                        );
                       });
                     },
                   ),

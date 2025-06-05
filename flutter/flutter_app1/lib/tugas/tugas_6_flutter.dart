@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app1/helper/preference_handler.dart';
 
 class TugasEnamFlutter extends StatefulWidget {
   const TugasEnamFlutter({super.key});
@@ -339,6 +340,41 @@ class _TugasEnamFlutterState extends State<TugasEnamFlutter> {
                                       ),
                                     ],
                                   ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                        PreferenceHandler.setLogin(true);
+                                        ScaffoldMessenger.of(
+                                          context,
+                                        ).showSnackBar(
+                                          SnackBar(
+                                            backgroundColor: Colors.blue,
+                                            content: Center(
+                                              child: Padding(
+                                                padding: const EdgeInsets.all(
+                                                  10,
+                                                ),
+                                                child: Text(
+                                                  "Informasi Login berhasil disimpan",
+                                                  style: TextStyle(
+                                                    fontFamily: "Poppins",
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                        Navigator.pushNamed(
+                                          context,
+                                          "/tugas_8",
+                                        );
+                                      },
+                                      child: Text("Simpan Login"),
+                                    ),
+                                  ],
                                 ),
                           );
                         },
