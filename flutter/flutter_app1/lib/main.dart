@@ -4,6 +4,7 @@ import 'package:flutter_app1/meet_16/register_screen.dart';
 import 'package:flutter_app1/study_case/siswa_screen_app.dart';
 import 'package:flutter_app1/tugas/test_navigation/test_navigation_page.dart';
 import 'package:flutter_app1/tugas/tugas_11/tugas_11_flutter.dart';
+import 'package:flutter_app1/tugas/tugas_12/tugas_12_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_1_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_2_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_3_flutter.dart';
@@ -56,8 +57,9 @@ class _MyAppState extends State<MyApp> {
         RegisterScreenApp.id: (context) => RegisterScreenApp(),
         SiswaScreenApp.id: (context) => SiswaScreenApp(),
         TugasSebelasFlutter.id: (context) => TugasSebelasFlutter(),
+        TugasDuaBelasFlutter.id: (context) => TugasDuaBelasFlutter(),
       },
-      initialRoute: TugasSebelasFlutter.id,
+      initialRoute: TugasDuaBelasFlutter.id,
       // home: MeetSatu(),
       // home: MeetDua(),
       // home: MeetTigaA(),
