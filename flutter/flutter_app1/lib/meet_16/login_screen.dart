@@ -34,12 +34,7 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 150,
-                      color: Color(0xffF34B1B).withAlpha(150),
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 150, color: Color(0xffF34B1B).withAlpha(150))],
                 ),
                 width: 230,
                 height: 230,
@@ -51,12 +46,7 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 140,
-                      color: Color(0xff283FB1).withAlpha(140),
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 140, color: Color(0xff283FB1).withAlpha(140))],
                 ),
                 width: 200,
                 height: 200,
@@ -68,12 +58,7 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 200,
-                      color: Color(0xffF34B1B).withAlpha(150),
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 200, color: Color(0xffF34B1B).withAlpha(150))],
                 ),
                 width: 230,
                 height: 230,
@@ -85,12 +70,7 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 140,
-                      color: Color(0xff283FB1).withAlpha(140),
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 140, color: Color(0xff283FB1).withAlpha(140))],
                 ),
                 width: 200,
                 height: 200,
@@ -106,11 +86,7 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
                     children: [
                       Text(
                         "Welcome Back",
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: TextStyle(fontFamily: "Poppins", fontSize: 24, fontWeight: FontWeight.w700),
                       ),
                       SizedBox(height: 12),
                       Text(
@@ -172,16 +148,8 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
                             },
                             child:
                                 isPasswordVisible
-                                    ? Icon(
-                                      Icons.visibility_outlined,
-                                      size: 24,
-                                      color: Color(0xffc4c4c4),
-                                    )
-                                    : Icon(
-                                      Icons.visibility_off_outlined,
-                                      size: 24,
-                                      color: Color(0xffc4c4c4),
-                                    ),
+                                    ? Icon(Icons.visibility_outlined, size: 24, color: Color(0xffc4c4c4))
+                                    : Icon(Icons.visibility_off_outlined, size: 24, color: Color(0xffc4c4c4)),
                           ),
                         ),
                         onChanged: (p0) {
@@ -239,15 +207,11 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(vertical: 16),
                             backgroundColor: Color(0xff283FB1),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(6),
-                            ),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                           ),
                           onPressed: () async {
                             if (_formKey.currentState!.validate()) {
-                              ScaffoldMessenger.of(
-                                context,
-                              ).hideCurrentSnackBar();
+                              ScaffoldMessenger.of(context).hideCurrentSnackBar();
                               UserModel? data = await DbHelper.login(
                                 email: emailController.text,
                                 password: passwordController.text,
@@ -327,20 +291,14 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(vertical: 16),
                           backgroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(32),
-                          ),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
                           shadowColor: Colors.transparent,
                         ),
                         onPressed: () {},
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image.asset(
-                              "assets/images/tugas_6/btnSigninwithGoogle.png",
-                              width: 16,
-                              height: 16,
-                            ),
+                            Image.asset("assets/images/tugas_6/btnSigninwithGoogle.png", width: 16, height: 16),
                             SizedBox(width: 10),
                             Text(
                               "Google",
@@ -370,10 +328,7 @@ class _LoginScreenAppState extends State<LoginScreenApp> {
                               recognizer:
                                   TapGestureRecognizer()
                                     ..onTap = () {
-                                      Navigator.pushNamed(
-                                        context,
-                                        RegisterScreenApp.id,
-                                      );
+                                      Navigator.pushNamed(context, RegisterScreenApp.id);
                                     },
                               style: TextStyle(
                                 fontFamily: "Poppins",

@@ -36,12 +36,7 @@ class _RegisterScreenAppState extends State<RegisterScreenApp> {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 150,
-                      color: Color(0xffF34B1B).withAlpha(150),
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 150, color: Color(0xffF34B1B).withAlpha(150))],
                 ),
                 width: 230,
                 height: 230,
@@ -53,12 +48,7 @@ class _RegisterScreenAppState extends State<RegisterScreenApp> {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 140,
-                      color: Color(0xff283FB1).withAlpha(140),
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 140, color: Color(0xff283FB1).withAlpha(140))],
                 ),
                 width: 200,
                 height: 200,
@@ -70,12 +60,7 @@ class _RegisterScreenAppState extends State<RegisterScreenApp> {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 200,
-                      color: Color(0xffF34B1B).withAlpha(150),
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 200, color: Color(0xffF34B1B).withAlpha(150))],
                 ),
                 width: 230,
                 height: 230,
@@ -87,12 +72,7 @@ class _RegisterScreenAppState extends State<RegisterScreenApp> {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 140,
-                      color: Color(0xff283FB1).withAlpha(140),
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 140, color: Color(0xff283FB1).withAlpha(140))],
                 ),
                 width: 200,
                 height: 200,
@@ -108,11 +88,7 @@ class _RegisterScreenAppState extends State<RegisterScreenApp> {
                     children: [
                       Text(
                         "Register",
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: TextStyle(fontFamily: "Poppins", fontSize: 24, fontWeight: FontWeight.w700),
                       ),
                       SizedBox(height: 12),
                       Text(
@@ -241,16 +217,8 @@ class _RegisterScreenAppState extends State<RegisterScreenApp> {
                             },
                             child:
                                 isPasswordVisible
-                                    ? Icon(
-                                      Icons.visibility_outlined,
-                                      size: 24,
-                                      color: Color(0xffc4c4c4),
-                                    )
-                                    : Icon(
-                                      Icons.visibility_off_outlined,
-                                      size: 24,
-                                      color: Color(0xffc4c4c4),
-                                    ),
+                                    ? Icon(Icons.visibility_outlined, size: 24, color: Color(0xffc4c4c4))
+                                    : Icon(Icons.visibility_off_outlined, size: 24, color: Color(0xffc4c4c4)),
                           ),
                         ),
                         onChanged: (p0) {
@@ -264,9 +232,7 @@ class _RegisterScreenAppState extends State<RegisterScreenApp> {
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(vertical: 16),
                             backgroundColor: Color(0xff283FB1),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(6),
-                            ),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                           ),
                           onPressed: () async {
                             if (_formKey.currentState!.validate()) {

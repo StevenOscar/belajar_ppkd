@@ -34,10 +34,7 @@ class DbHelper {
     print("user registered successfully");
   }
 
-  static Future<UserModel?> login({
-    required String email,
-    required String password,
-  }) async {
+  static Future<UserModel?> login({required String email, required String password}) async {
     final db = await initDb();
 
     final List<Map<String, dynamic>> data = await db.query(

@@ -8,22 +8,10 @@ class UserModel {
   final String? phone;
   final String password;
 
-  UserModel({
-    this.email,
-    this.name,
-    required this.username,
-    this.phone,
-    required this.password,
-  });
+  UserModel({this.email, this.name, required this.username, this.phone, required this.password});
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
-      'email': email,
-      'name': name,
-      'username': username,
-      'phone': phone,
-      'password': password,
-    };
+    return <String, dynamic>{'email': email, 'name': name, 'username': username, 'phone': phone, 'password': password};
   }
 
   factory UserModel.fromMap(Map<String, dynamic> map) {

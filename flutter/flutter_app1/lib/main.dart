@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/meet_16/login_screen.dart';
 import 'package:flutter_app1/meet_16/register_screen.dart';
+import 'package:flutter_app1/meet_22/views/list_user_screen.dart';
 import 'package:flutter_app1/study_case/siswa_screen_app.dart';
 import 'package:flutter_app1/tugas/test_navigation/test_navigation_page.dart';
 import 'package:flutter_app1/tugas/tugas_11/tugas_11_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_12/tugas_12_flutter.dart';
+import 'package:flutter_app1/tugas/tugas_14/screen/tugas_14_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_1_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_2_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_3_flutter.dart';
@@ -31,10 +33,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-        fontFamily: "Poppins",
-      ),
+      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.red), fontFamily: "Poppins"),
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -58,8 +57,10 @@ class _MyAppState extends State<MyApp> {
         SiswaScreenApp.id: (context) => SiswaScreenApp(),
         TugasSebelasFlutter.id: (context) => TugasSebelasFlutter(),
         TugasDuaBelasFlutter.id: (context) => TugasDuaBelasFlutter(),
+        TugasEmpatBelasFlutter.id: (context) => TugasEmpatBelasFlutter(),
+        ListUserScreen.id: (context) => ListUserScreen(),
       },
-      initialRoute: TugasDuaBelasFlutter.id,
+      initialRoute: TugasEmpatBelasFlutter.id,
       // home: MeetSatu(),
       // home: MeetDua(),
       // home: MeetTigaA(),
