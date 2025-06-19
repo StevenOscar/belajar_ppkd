@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 class GetPokemon {
   Future<int> getTotalPokemon() async {
-    final response = await http.get(Uri.parse("https://pokeapi.co/api/v2/pokemon"));
+    final response = await http.get(Uri.parse("https://pokeapi.co/api/v2/pokemon?limit=1"));
 
     if (response.statusCode == 200) {
       AllPokemonModel responseModel = AllPokemonModel.fromJson(json.decode(response.body));
@@ -19,7 +19,6 @@ class GetPokemon {
   Future<List<Pokemon>> getAllPokemon() async {
     final int limit = await getTotalPokemon();
     final response = await http.get(Uri.parse("https://pokeapi.co/api/v2/pokemon?limit=$limit"));
-
     if (response.statusCode == 200) {
       final List<dynamic> pokemonJson = json.decode(response.body)["results"];
       return pokemonJson.map((json) => Pokemon.fromJson(json)).toList();
