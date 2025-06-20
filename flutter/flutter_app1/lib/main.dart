@@ -7,6 +7,10 @@ import 'package:flutter_app1/tugas/test_navigation/test_navigation_page.dart';
 import 'package:flutter_app1/tugas/tugas_11/tugas_11_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_12/tugas_12_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_14/screen/tugas_14_flutter.dart';
+import 'package:flutter_app1/tugas/tugas_15/screens/login_screen_15.dart';
+import 'package:flutter_app1/tugas/tugas_15/screens/profile_screen_15.dart';
+import 'package:flutter_app1/tugas/tugas_15/screens/register_screen_15.dart';
+import 'package:flutter_app1/tugas/tugas_15/tugas_15_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_1_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_2_flutter.dart';
 import 'package:flutter_app1/tugas/tugas_3_flutter.dart';
@@ -58,9 +62,12 @@ class _MyAppState extends State<MyApp> {
         TugasSebelasFlutter.id: (context) => TugasSebelasFlutter(),
         TugasDuaBelasFlutter.id: (context) => TugasDuaBelasFlutter(),
         TugasEmpatBelasFlutter.id: (context) => TugasEmpatBelasFlutter(),
+        TugasLimaBelasFlutter.id: (context) => TugasLimaBelasFlutter(),
+        LoginScreen15.id: (context) => LoginScreen15(),
+        RegisterScreen15.id: (context) => RegisterScreen15(),
         ListUserScreen.id: (context) => ListUserScreen(),
       },
-      initialRoute: TugasEmpatBelasFlutter.id,
+      initialRoute: TugasLimaBelasFlutter.id,
       // home: MeetSatu(),
       // home: MeetDua(),
       // home: MeetTigaA(),
