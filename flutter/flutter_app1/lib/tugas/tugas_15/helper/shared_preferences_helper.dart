@@ -9,12 +9,12 @@ class SharedPreferencesHelper {
     return token;
   }
 
-  static void setToken(String token) async {
+  static Future<void> setToken(String token) async {
     final prefs = await SharedPreferences.getInstance();
     prefs.setString(_tokenKey, token);
   }
 
-  static void deleteToken() async {
+  static Future<void> deleteToken() async {
     final prefs = await SharedPreferences.getInstance();
     prefs.remove(_tokenKey);
   }

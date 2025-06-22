@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app1/tugas/tugas_15/api/user_api.dart';
 import 'package:flutter_app1/tugas/tugas_15/helper/shared_preferences_helper.dart';
-import 'package:flutter_app1/tugas/tugas_15/screens/profile_screen_15.dart';
+import 'package:flutter_app1/tugas/tugas_15/screens/pokemon_list_screen_15.dart';
 import 'package:flutter_app1/tugas/tugas_15/screens/register_screen_15.dart';
 import 'package:flutter_app1/tugas/tugas_15/widgets/text_form_field_widget_15.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -49,7 +49,11 @@ class _LoginScreen15State extends State<LoginScreen15> {
         ),
       );
     } else {
-      SharedPreferencesHelper.setToken(res.data!.token!);
+      await SharedPreferencesHelper.setToken(res.data!.token!);
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => PokemonListScreen15(userData: res.data!.user!)),
+      );
       fToast.showToast(
         gravity: ToastGravity.TOP,
         toastDuration: Duration(seconds: 2),
@@ -58,10 +62,6 @@ class _LoginScreen15State extends State<LoginScreen15> {
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 20),
           child: Text(res.message, style: TextStyle(color: Colors.white)),
         ),
-      );
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => ProfileScreen15(userData: res.data!.user!)),
       );
     }
     setState(() {

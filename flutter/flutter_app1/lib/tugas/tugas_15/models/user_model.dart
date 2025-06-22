@@ -6,14 +6,20 @@ class UserModel {
 
   UserModel({this.token, this.user});
 
-  factory UserModel.fromRawJson(String str) => UserModel.fromJson(json.decode(str));
+  factory UserModel.fromRawJson(String str) => UserModel.fromLoginJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory UserModel.fromJson(Map<String, dynamic> json) =>
-      UserModel(token: json["token"], user: json["user"] == null ? null : User.fromJson(json["user"]));
+  factory UserModel.fromLoginJson(Map<String, dynamic> json) => UserModel(
+    token: json["token"],
+    user: json["user"] == null ? null : User.fromJson(json["user"]),
+  );
 
-  Map<String, dynamic> toJson() => {"token": token, "user": user?.toJson()};
+  factory UserModel.fromProfileJson(Map<String, dynamic> json) {
+    return UserModel(user: User.fromJson(json));
+  }
+
+  Map<String, dynamic> toJson() => {"token": token, "data": user?.toJson()};
 }
 
 class User {

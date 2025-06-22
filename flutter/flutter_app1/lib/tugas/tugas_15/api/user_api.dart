@@ -9,7 +9,8 @@ class UserApi {
   static final String baseUrl = "https://absen.quidi.id";
   static final String registerUrl = "$baseUrl/api/register";
   static final String loginUrl = "$baseUrl/api/login";
-  static final String getProfilUrl = "$baseUrl/api/get_profil";
+  static final String getProfilUrl = "$baseUrl/api/profile";
+  static final String editProfileUrl = "$baseUrl/api/profile";
 
   Future<ResponseModel> createUser({
     required String name,
@@ -41,7 +42,7 @@ class UserApi {
     if (response.statusCode == 200) {
       return ResponseModel<UserModel>.fromJson(
         json: jsonDecode(response.body),
-        fromJsonT: (x) => UserModel.fromJson(x),
+        fromJsonT: (x) => UserModel.fromLoginJson(x),
       );
     } else {
       return ResponseModel<UserModel>.fromJson(json: jsonDecode(response.body));
@@ -50,14 +51,32 @@ class UserApi {
 
   Future<ResponseModel<UserModel>> getUserProfile() async {
     String token = await SharedPreferencesHelper.getToken() ?? "";
-    final response = await http.post(
+    final response = await http.get(
       Uri.parse(getProfilUrl),
       headers: {"Accept": "application/json", "Authorization": "Bearer $token"},
     );
     if (response.statusCode == 200) {
       return ResponseModel<UserModel>.fromJson(
         json: jsonDecode(response.body),
-        fromJsonT: (x) => UserModel.fromJson(x),
+        fromJsonT: (x) => UserModel.fromProfileJson(x),
+      );
+    } else {
+      return ResponseModel<UserModel>.fromJson(json: jsonDecode(response.body));
+    }
+  }
+
+  Future<ResponseModel<UserModel>> editUserProfile({required String name}) async {
+    String token = await SharedPreferencesHelper.getToken() ?? "";
+    final response = await http.put(
+      Uri.parse(editProfileUrl),
+      headers: {"Accept": "application/json", "Authorization": "Bearer $token"},
+      body: {"name": name},
+    );
+    print(response.body);
+    if (response.statusCode == 200) {
+      return ResponseModel<UserModel>.fromJson(
+        json: jsonDecode(response.body),
+        fromJsonT: (x) => UserModel.fromProfileJson(x),
       );
     } else {
       return ResponseModel<UserModel>.fromJson(json: jsonDecode(response.body));
